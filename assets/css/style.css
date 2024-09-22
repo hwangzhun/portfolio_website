@@ -55,6 +55,7 @@
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --light-gray-50: hsla(0, 0%, 84%, 0.5);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -2153,44 +2154,4 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 
-
-  /* 自定义 SweetAlert2 弹窗的样式 */
-  .custom-swal-popup {
-    background-color: var(--eerie-black-2);
-    /* 弹窗背景颜色 */
-    border: 1px solid var(--jet);
-    border-radius: 20px;
-    /* 圆角 */
-    box-shadow: var(--shadow-5);
-    /* 阴影 */
-    overflow: hidden;
-    /* 不允许弹窗宽度超过视口宽度 */
-    box-sizing: border-box;
-    /* 确保宽度计算包含内边距和边框 */
-  }
-
-  /* 限制弹窗内图片或视频的最大宽度 */
-  .swal2-popup video,
-  .swal2-popup img {
-    max-width: 100%;
-    height: auto;
-    /* 保持视频或图片的比例 */
-  }
-
-  /* 弹窗标题颜色 */
-  .swal2-title {
-    color: var(--white-2)
-  }
-
-  /* 弹窗关闭图标 */
-  .swal2-close {
-    color: var(--light-gray);
-    opacity: 1;
-}
-
-/* 修改关闭按钮的悬停颜色 */
-.swal2-close:hover {
-  color: var(--orange-yellow-crayola);
-  cursor: pointer;
-}
 }

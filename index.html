@@ -9,6 +9,9 @@
 
   <link rel="stylesheet" href="assets/js/video_player.js">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="assets/css/video_player.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/js/language_change.js">
   <!--
     - favicon
   -->
@@ -44,11 +47,12 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-avatar-1.png" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Cayson hwang</h1>
+          <h1 class="name" title="Richard hanrick">黄臻</h1>
+          <p class="english_name">Cayson</p>
 
           <p class="title">摄影师/剪辑师</p>
         </div>
@@ -172,23 +176,23 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>关于</button>
+            <button class="navbar-link  active" data-nav-link data-page-link="about">关于</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-page-link="resume">工作经历</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-page-link="portfolio">作品集</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link data-page-link="blog">Blog</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>联系我</button>
+            <button class="navbar-link" data-nav-link data-page-link="contact">联系我</button>
           </li>
 
         </ul>
@@ -211,11 +215,11 @@
 
         <section class="about-text">
           <p>
-            六年工作经验，曾任职展会公司新媒体运营的摄影师，剪辑师。制作多个百万级/千万级消耗作品。参与多种不同类型项目的视频的前后期制作，包括信息流视频、产品展示视频，珠宝展示、抖音长短剧情片、口播访谈视频、TVC、活动视频、宣传片等类型。
+            六年工作经验，曾在公司担任新媒体运营团队的摄影师和剪辑师。参与多个类型项目的视频制作，涵盖信息流广告、产品视频、长短剧情片、口播访谈、活动记录及宣传片等。
           </p>
 
           <p>
-            六年的工作经历让我积累了丰富的行业知识和实践经验，我擅长使用各种摄影摄像设备，熟练掌握后期剪辑软件，能够快速适应不同的工作环境和需求。我热爱我的工作，并且始终追求卓越，致力于通过我的作品，为客户创造价值，为观众带来感动。
+            还精通产品摄影和场景图拍摄，擅长捕捉产品细节及场景氛围，为品牌视觉呈现提供强有力的支持。具备扎实的技术基础，能在高压环境下高效工作，学习能力强，能够快速适应新项目。期待在未来与更多优秀团队合作，创作出更具影响力的视觉作品。
           </p>
         </section>
 
@@ -530,13 +534,21 @@
 
               <h4 class="h4 timeline-item-title">深圳恩浦诺科技有限公司</h4>
 
-              <span>2022 — 2024</span>
-
-              <p class="timeline-text"><strong>1.</strong>参与众筹项目，该项目不仅达成目标，而且实际众筹超出目标金额的 1109.4%。这一成就不仅展示了我的创意和执行力，也体现了与运营团队的紧密合作。</p>
-              <p class="timeline-text"><strong>2.</strong>社交媒体平台上，通过策划的内容和互动策略，为公司的脸书和IG吸引并维持了平均2000名活跃粉丝，有效支持了品牌建设和用户参与度。</p>
-              <p class="timeline-text"><strong>3.</strong>黑色星期五促销活动中，通过精准的市场定位和视觉营销策略，实现了300万美金的销售业绩，远超年度平均销售水平，为公司带来了显著的经济效益。</p>
-              <p class="timeline-text"><strong>4.</strong>为公司电商和社交媒体团队提供高质量的产品图和场景图，以支持他们的运营需求，通过与内部团队的紧密合作和持续的沟通，确保了内容的质量和效果，为公司的在线形象和销售业绩做出了重要贡献。</p>
-
+              <span>2022 — <span id="current-year"></span></span>
+              <ul class="list-num">
+                <li>
+                  <p class="timeline-text">主导公司众筹项目的视频策划、拍摄和后期制作，项目实际众筹金额达55472美元，超出目标1109.4%。通过视觉叙事和创意表达，将产品亮点最大化展现，增强用户的购买欲望。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">负责黑色星期五等大型促销活动的视频和图片内容，凭借出色的市场洞察和视觉把控，帮助公司在活动期间实现了超过300万美元的销售业绩，展现了视觉内容在销售转化中的强大推动力。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">通过策划和拍摄高质量的产品图片与场景图，助力电商平台的视觉呈现，并在公司社交媒体平台(Facebook、Instagram)持续维护品牌形象，吸引2000+活跃粉丝，显著提升品牌知名度。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">参与新品发布及线上活动的摄像与剪辑工作，确保视频和图片的视觉效果专业且富有吸引力，有效提高了活动参与度与品牌曝光率。</p>
+                </li>
+              </ul>
             </li>
 
             <li class="timeline-item">
@@ -544,27 +556,43 @@
               <h4 class="h4 timeline-item-title">深圳市捷时行教育科技有限公司</h4>
 
               <span>2019 — 2022</span>
-
-              <p class="timeline-text"><strong>1.</strong>在《全国教学能大赛》中，负责为5位教授提供专业的视频拍摄和后期制作。教授在各自科目中均获得了前五名的优异成绩，充分证明了视频制作方面的专业技能和对大赛要求的深刻理解。</p>
-              <p class="timeline-text"><strong>2.</strong>根据课题组的需求制作了一系列视频课件，这些课件被广泛用于学生上课，有效提升教学的质量。课件的质量得到了老师的一致认可。</p>
-              <p class="timeline-text"><strong>3.</strong>成功制作超过500条教学课件视频到学校的课程库中，这些视频覆盖了多个学科领域，极大地丰富了学校的在线教育资源，为学生提供了多样化的学习选择。</p>
-              <p class="timeline-text"><strong>4.</strong>通过专业视频制作技能，为多位教师在全国教学能大赛中提供了强有力的支持,所有协助的教师均取得了显著的成绩。</p>
-
+              <ul class="list-num">
+                <li>
+                  <p class="timeline-text">负责《全国教学能大赛》中参赛视频的全流程制作，支持5位教授取得优异成绩，充分体现了对教育行业视频制作标准的理解和执行力。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">主导并完成500多条教育视频的拍摄与剪辑，覆盖多个学科，显著提升了在线课程资源的丰富性，能够制定合理的计划管理多项目，并确保按时高质量交付。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">与教学团队紧密合作，制作出广受好评的课件视频，展示了良好的沟通技巧和协同工作的能力，在项目中，通过与教师和其他制作人员的密切协作，确保教学内容的精准传达。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">在多所学校的线上教学项目中，提供了从拍摄到后期的全方位技术支持，利用视频技术创新提升了教育资源的传播效果。</p>
+                </li>
+              </ul>
             </li>
 
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">中国国际光电博览会</h4>
 
-              <span>2017-2018</span>
+              <span>2018-2019</span>
 
-              <p class="timeline-text"><strong>1.</strong>策划、拍摄并后期制作公司年度宣传视频，助力公司品牌形象的提示，为即将到来的展会预热。通过精准的视觉叙事和创意表达，成功吸引了目标观众的注意力，为公司赢得了更多的关注和期待。</p>
-              <p class="timeline-text"><strong>2.</strong>拍摄企业家访谈节目，通过深入的对话和专业的拍摄技巧，展现了企业家的风采和企业的核心价值。这些访谈节目不仅丰富了公司的内容库，也为观众提供了宝贵的商业洞察和灵感。</p>
-              <p class="timeline-text"><strong>3.</strong>展会现场，负责拍摄活动照片和空镜视频，捕捉了展会的精彩瞬间和重要时刻。这些高质量的视觉素材不仅记录了展会的盛况，也为公司的宣传和回顾提供了宝贵的资料。</p>
-              <p class="timeline-text"><strong>4.</strong>与新媒体运营团队紧密合作，根据他们的需求拍摄和剪辑视频素材。通过灵活的创意和高效的制作流程，为公司的新媒体平台提供了多样化和高质量的内容，增强了用户的参与度和品牌的影响力。</p>
+              <ul class="list-num">
+                <li>
+                  <p class="timeline-text">策划并拍摄了多个高规格的企业宣传片和展会活动视频，准确捕捉公司品牌的核心价值，视频成为后续宣传的重要材料，展现了高效的项目执行能力。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">为企业家访谈节目的拍摄和剪辑提供创意支持，利用专业的拍摄手法和独特的视觉语言，使访谈内容更加生动，引发观众共鸣。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">展会现场拍摄期间，灵活应对不同场景的拍摄需求，捕捉关键时刻和亮点，为新媒体提供高质量的视觉素材，帮助公司在展会期间提升曝光度和知名度。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">与新媒体运营团队紧密合作，根据不同平台的需求优化拍摄内容和后期剪辑，确保内容在不同媒体上的传播效果最大化，提升品牌在线影响力。</p>
+                </li>
+              </ul>
             </li>
-
-          </ol>
 
         </section>
 
@@ -575,37 +603,59 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3">项目经历</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
+              <div class="project_info">
+                <h4 class="h4 timeline-item-title">CEBA Rapi 充电宝众筹项目</h4>
+                <p class="project_director">项目负责人 摄影师/摄像师</p>
+                <a href="https://www.kickstarter.com/projects/ennoprogroup/ceba-rapi-worlds-fastest-charging-power-bank"class="project_link">项目链接</a>
+              </div>
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <span>2024</span>
 
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
+              <ul class="list-num">
+                <li>
+                  <p class="timeline-text"> 负责拍摄宣传片、场景图和白底图，突出Ceba RAPI的快速充电技术和便携性。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">利用专业摄影和摄像技术，制作了高质量的视觉内容，有效传达了产品的核心优势。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">宣传片和图片在视觉上极具吸引力，促进了项目在Kickstarter上的曝光和支持。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">项目最终筹得55472美金，超出了5000美金的众筹目标。</p>
+                </li>
+              </ul>
             </li>
 
             <li class="timeline-item">
+              <div class="project_info">
+                <h4 class="h4 timeline-item-title">GlassOuse 辅助设备新产品上线</h4>
+                <p class="project_director">项目负责人 摄影师/摄像师</p>
+                <a href="https://www.kickstarter.com/projects/ennoprogroup/ceba-rapi-worlds-fastest-charging-power-bank"class="project_link">项目链接</a>
+              </div>
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <span>2023</span>
 
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
+              <ul class="list-num">
+                <li>
+                  <p class="timeline-text"> 负责为 GlassOuse 三个新的 产品上线制作拍摄脚本、制定拍摄计划。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">协调团队资源，确保拍摄和剪辑工作按计划进行，按时完成上线任务。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">制作高质量的视觉内容，有效传达产品的核心优势和使用便利性。</p>
+                </li>
+                <li>
+                  <p class="timeline-text">成功在黑色星期五之前上线新产品，为品牌引流，黑五期间销售额达到500万人民币。</p>
+                </li>
+              </ul>
             </li>
 
             <li class="timeline-item">
@@ -791,9 +841,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img
-                    src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/Highlights%20of%20CIOE%202019.jpg"
-                    alt="orizon" loading="lazy">
+                  <img src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/Highlights%20of%20CIOE%202019.jpg" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">CIOE 2019</h3>
@@ -803,74 +851,75 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#" class="play-video" data-id="3">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E6%95%99%E6%A1%88%E9%85%8D%E5%A5%97-5G%E5%BA%94%E6%80%A5%E4%B8%93%E7%BD%91%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BC%98%E5%8C%96.jpg" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">5G应急专网部署与优化</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">剪辑</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#" class="play-video" data-id="4">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E5%BE%AE%E5%89%A7%E6%83%85-%E5%B9%B3%E5%AE%89%E5%A5%BD%E5%AD%A6.jpg" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">平安好学</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">信息流</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#" class="play-video" data-id="5">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E5%AE%A3%E4%BC%A0%E7%89%87-%E5%8F%A3%E7%BD%A9%E5%B7%A5%E5%8E%82.jpg" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">口罩工厂</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">宣传片</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#" class="play-video" data-id="6">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/TVC-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95.jpg" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">英语面试</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">TVC</p>
 
               </a>
             </li>
@@ -1177,6 +1226,14 @@
     </div>
 
   </main>
+
+  <script>
+    function displayCurrentYear() {
+      var currentYear = new Date().getFullYear();
+      document.getElementById("current-year").textContent = currentYear;
+    }
+    window.onload = displayCurrentYear; // 当页面加载完毕时显示年份
+  </script>
 
   <!--
     - custom js link

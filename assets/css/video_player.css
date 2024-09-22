@@ -1,0 +1,101 @@
+/* 自定义内容布局 */
+.swal-custom-content {
+  display: flex;
+  flex-direction: column; /* 垂直排列视频等内容 */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header flex布局: 标题和关闭按钮对齐 */
+.swal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+/* 自定义标题样式 */
+.custom-title {
+  color: var(--white-2);
+  text-transform: capitalize;
+  font-size: var(--fs-2);
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* 标题和关闭按钮左右对齐 */
+  align-items: center; /* 垂直居中 */
+  flex-grow: 1; /* 标题占据剩余空间 */
+}
+
+/* 自定义 SweetAlert2 弹窗的样式 */
+.custom-swal-popup {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 90%;              /* 弹窗宽度为屏幕的 90% */
+  max-width: 1920px;         /* 弹窗最大宽度为 800px，防止在大屏设备上过大 */
+  padding: 1em;
+}
+
+/* 自适应视频 */
+.responsive-video {
+  width: 100%;              /* 视频宽度为 100%，跟随弹窗宽度 */
+  height: auto;             /* 高度根据宽度比例自适应 */
+}
+
+/* 限制弹窗内图片或视频的最大宽度 */
+.swal2-popup video,
+.swal2-popup img {
+  max-width: 100%;
+  height: auto;/* 保持视频或图片的比例 */
+}
+
+/* 弹窗标题颜色 */
+.swal2-title {
+  color: var(--white-2);
+  text-transform: capitalize;
+  font-size: var(--fs-2);
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+/* 弹窗关闭图标 */
+.custom-close-button {
+  color: var(--light-gray);
+  opacity: 1;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  font-size: 2em;
+
+}
+
+.swal2-html-container {
+  padding: 0 !important;
+}
+
+
+.custom-close-button:hover {
+  color: var(--orange-yellow-crayola);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .custom-swal-popup {
+      width: 100%;          /* 在小屏幕设备上弹窗宽度为 100% */
+      max-width: 90%;       /* 防止弹窗在特别小的设备上过大 */
+  }
+}
+
+@media (max-width: 580px) {
+  .custom-title {
+    justify-content: space-between; /* 标题和关闭按钮左右对齐 */
+    align-items: center; /* 垂直居中 */
+    flex-grow: 1; /* 标题占据剩余空间 */
+  }
+}
