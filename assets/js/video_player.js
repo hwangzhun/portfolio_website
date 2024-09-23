@@ -39,6 +39,11 @@ const videos = [{
     title: '工具箱',
     src: 'https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E4%B8%AA%E4%BA%BAIP-%E5%8F%A3%E6%92%AD.mp4'
 },
+{
+    id: 9,
+    title: 'Glassouse Blink switch',
+    src: 'https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/blink%20switch.mp4'
+},
 ];
 
 // 通过事件委托统一处理多个视频的播放逻辑
