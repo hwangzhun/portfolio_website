@@ -29,6 +29,16 @@ const videos = [{
     title: '英语面试',
     src: 'https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/TVC-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95.mp4'
 },
+{
+    id: 7,
+    title: '工具箱',
+    src: 'https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E7%94%B5%E5%95%86-%E5%B7%A5%E5%85%B7%E7%AE%B1.mp4'
+},
+{
+    id: 8,
+    title: '工具箱',
+    src: 'https://blog-data-1306368489.cos.ap-guangzhou.myqcloud.com/portfolio_video/%E4%B8%AA%E4%BA%BAIP-%E5%8F%A3%E6%92%AD.mp4'
+},
 ];
 
 // 通过事件委托统一处理多个视频的播放逻辑
