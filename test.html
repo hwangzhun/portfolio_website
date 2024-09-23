@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo 博客文章展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 5px;
+        }
+        .img {
+             min-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>我的 Halo 博客文章</h1>
+<div id="posts"></div>
+
+<script>
+    const apiKey = 'pat_eyJraWQiOiJWTEZyYllkNUZmZnZFZU1LOW1RVlVUdm9KSVplX2VHMjhRX05BVWswX1RVIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwOi8vYmxvZy5od2FuZ3podW4uY29tIiwic3ViIjoiaHdhbmd6aHVuIiwiaWF0IjoxNzI3MTA0NDQ3LCJqdGkiOiI5MDJiNmMwYi1mMmY5LTU1MzEtYjA1YS03YTZmMzE5M2JmMGQiLCJwYXRfbmFtZSI6InBhdC1od2FuZ3podW4tb3luRmsifQ.p43Vkktylp4p5BnoxKL6DBl2x7FD4EmycDXqdXPCtgTMnkGZfsNwwGa9XTmUDmVGFD9FV_c2lmcQsL1Hmjd0_VhCM17okF0akj7vnMMQXntYuFObb0XUqFhApPbfsmUBCkFia5qJwl6jTAEwhhmCayvMm5nyJ7nCMiJotr_aFBse0JoZinXzv5_9NXiImNRX5Dxec9fFelTsBjSrLKenFm2t3snJj2X7bOolpe6G-aAZQbDuiEubAe19DYN5dMzUZ35Wt2GovKspCsRy9hi3axFIBP4GiTx5nQbzAqtiaxZeHi746uIsyRlqgnId39k6TyIxnBpLGeuaBYYQkMfEwOe40GlbJrPT1G9GOAdcfna1YiVHTQo3K6-1j5eNppeyTByU0WhN8gxS7tFuu_UdS4h9Mzn62azM_JNQ8VxhadFcE8AE3Cmo_4J1dqUQbzfg0auDOlYId-DcWgyTr_Zqm761G1574XrrZVI4mEHcLJpyv_4M6KYmxnITX0FSA0pBnlv_hwmv3XAtjS3Yx7uatA_rWigmqYHt3G5jM14epAxYjZDZ6P0NuZXZDFPaeqTU5eit3tWX3E2KxC3JFHha1E45oLaAy84elH-p0ByMkpabI5YC9uvpbK0uaxWmJaOjsU3NCK8a7-c1Enqr22wmRSND8-8wmXSMz2VvK6DBJpY'; // 替换为你的实际 API 密钥
+    const apiUrl = 'https://blog.hwangzhun.com/apis/content.halo.run/v1alpha1/posts'; // 替换为你的 API URL
+
+// 使用 fetch 获取文章数据
+fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'accept': '*/*'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data); // 检查返回的数据结构
+        renderPosts(data.items); // 调用渲染函数
+    })
+    .catch(error => console.error('获取文章时出错:', error));
+
+    function renderPosts(posts) {
+        const postsContainer = document.getElementById('posts');
+
+        // 确保 posts 存在并且是一个数组
+        if (posts && Array.isArray(posts)) {
+            posts.forEach(post => {
+                const postSpec = post.spec; // 获取 spec 对象
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('post');
+
+                postDiv.innerHTML = `
+                    <div class="title">${postSpec.title || '无标题文章'}</div>
+                    <div class="content">作者: ${postSpec.owner}</div>
+                    <div class="content">公开状态: ${postSpec.visible}</div>
+                    <div class="content">摘要: ${postSpec.excerpt.raw || '无摘要'}</div>
+                    <div class="content">封面:<img src="${postSpec.cover}"> </div>
+                `;
+                postsContainer.appendChild(postDiv);
+            });
+        } else {
+            postsContainer.innerHTML = '没有找到文章。';
+        }
+    }
+</script>
+
+</body>
+</html>
