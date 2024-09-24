@@ -12,7 +12,7 @@
                 "owner": "hwangzhun",
                 "template": "",
                 "cover": "",
-                "deleted": false,
+                "deleted": true,
                 "publish": false,
                 "pinned": false,
                 "allowComment": true,
@@ -38,11 +38,13 @@
                     }
                 ],
                 "permalink": "/archives/1725689369819",
+                "excerpt": "",
                 "inProgress": true,
                 "contributors": [
                     "hwangzhun"
                 ],
-                "observedVersion": 16
+                "hideFromList": false,
+                "observedVersion": 3
             },
             "apiVersion": "content.halo.run/v1alpha1",
             "kind": "Post",
@@ -53,19 +55,19 @@
                 "name": "47166cbc-1d67-48b3-95a6-b7da37f3e99f",
                 "labels": {
                     "content.halo.run/published": "false",
-                    "content.halo.run/deleted": "false",
+                    "content.halo.run/deleted": "true",
                     "content.halo.run/owner": "hwangzhun",
                     "content.halo.run/visible": "PUBLIC"
                 },
                 "annotations": {
                     "content.halo.run/preferred-editor": "willow-mde",
-                    "checksum/config": "8c69df5e93d2672d353fdf9e6a087e00a9aa6cbb9e14bd4f42b6560492c4fbcd",
+                    "checksum/config": "cf56270a0430695cf3eadd339d64abce2a8bbb6057bb39649053f0f6a03e234b",
                     "content.halo.run/permalink-pattern": "/archives/{slug}",
                     "content.halo.run/last-associated-tags": "[]",
                     "content.halo.run/last-associated-categories": "[]",
                     "content.halo.run/stats": "{\"visit\":2,\"upvote\":0,\"totalComment\":0,\"approvedComment\":0}"
                 },
-                "version": 0,
+                "version": 3,
                 "creationTimestamp": "2024-09-07T06:09:30.232189487Z"
             }
         },
@@ -740,7 +742,7 @@
                 ],
                 "hideFromList": false,
                 "lastModifyTime": "2024-05-30T09:11:16.410521536Z",
-                "observedVersion": 5
+                "observedVersion": 7
             },
             "apiVersion": "content.halo.run/v1alpha1",
             "kind": "Post",
@@ -765,9 +767,9 @@
                     "content.halo.run/last-associated-tags": "[\"tag-DfbCe\",\"tag-rBWMv\",\"tag-UzzNA\",\"tag-HYZzj\"]",
                     "content.halo.run/last-associated-categories": "[\"76514a40-6ef1-4ed9-b58a-e26945bde3ca\",\"category-qvZKM\"]",
                     "content.halo.run/last-released-snapshot": "951084c0-ee51-49ff-a421-3e0f5f865cbf",
-                    "content.halo.run/stats": "{\"visit\":20,\"upvote\":0,\"totalComment\":0,\"approvedComment\":0}"
+                    "content.halo.run/stats": "{\"visit\":22,\"upvote\":0,\"totalComment\":0,\"approvedComment\":0}"
                 },
-                "version": 5,
+                "version": 7,
                 "creationTimestamp": "2024-05-30T09:05:39.864608725Z"
             }
         },
@@ -922,7 +924,7 @@
                 ],
                 "hideFromList": false,
                 "lastModifyTime": "2024-05-30T07:12:03.732197084Z",
-                "observedVersion": 61
+                "observedVersion": 3
             },
             "apiVersion": "content.halo.run/v1alpha1",
             "kind": "Post",
@@ -947,9 +949,9 @@
                     "content.halo.run/last-associated-tags": "[\"tag-PMGNj\",\"tag-DfbCe\",\"tag-vNzvr\",\"tag-fgyhs\",\"tag-QyLWe\"]",
                     "content.halo.run/last-associated-categories": "[\"category-QiuXZ\",\"76514a40-6ef1-4ed9-b58a-e26945bde3ca\"]",
                     "content.halo.run/last-released-snapshot": "557bc86c-294c-4fa8-9240-7e17e8c08345",
-                    "content.halo.run/stats": "{\"visit\":6,\"upvote\":0,\"totalComment\":0,\"approvedComment\":0}"
+                    "content.halo.run/stats": "{\"visit\":7,\"upvote\":0,\"totalComment\":0,\"approvedComment\":0}"
                 },
-                "version": 1,
+                "version": 3,
                 "creationTimestamp": "2024-05-30T06:36:18.770983530Z"
             }
         },
