@@ -11,38 +11,31 @@
 
 
 
+
+
+
 /*-----------------------------------*\
-  #CUSTOM PROPERTY
+  #自定义属性
 \*-----------------------------------*/
 
 :root {
 
-  /**
-   * colors
-   */
+  /* 颜色 */
 
-  /* gradient */
+  /* 渐变 */
 
-  --bg-gradient-onyx: linear-gradient(to bottom right,
-      hsl(240, 1%, 25%) 3%,
-      hsl(0, 0%, 19%) 97%);
-  --bg-gradient-jet: linear-gradient(to bottom right,
-      hsla(240, 1%, 18%, 0.251) 0%,
-      hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+  --bg-gradient-onyx: #3F3F40;
+  --bg-gradient-jet: hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(to bottom right,
       hsl(45, 100%, 71%) 0%,
       hsla(36, 100%, 69%, 0) 50%);
   --bg-gradient-yellow-2: linear-gradient(135deg,
       hsla(45, 100%, 71%, 0.251) 0%,
       hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
-  --border-gradient-onyx: linear-gradient(to bottom right,
-      hsl(0, 0%, 25%) 0%,
-      hsla(0, 0%, 25%, 0) 50%);
-  --text-gradient-yellow: linear-gradient(to right,
-      hsl(45, 100%, 72%),
-      hsl(35, 100%, 68%));
+  --border-gradient-onyx: #404040;
+  --text-gradient-yellow: hsl(45, 100%, 72%);
 
-  /* solid */
+  /* 纯色 */
 
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
@@ -59,13 +52,13 @@
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
-   * typography
+   * 排版
    */
 
-  /* font-family */
+  /* 字体 */
   --ff-poppins: 'Poppins', sans-serif;
 
-  /* font-size */
+  /* 字体大小 */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -75,37 +68,38 @@
   --fs-7: 13px;
   --fs-8: 11px;
 
-  /* font-weight */
+  /* 字体质量 */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
-
+  /* 阴影 */
+  
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
 
+  /* 过度动画 */
+ 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
-
 }
 
+  /* 自定义字体 */
+  @font-face {
+    font-family: Futura;
+    src: url(/assets/fonts/FuturaNowHeadlineBold.ttf);
+  }
 
 
 
 
 /*-----------------------------------*\
-  #RESET
+  # 重置 CSS
 \*-----------------------------------*/
 
 *,
@@ -164,11 +158,8 @@ html {
 
 body {
   background: var(--smoky-black);
+  transition: var(--transition-2);
 }
-
-
-
-
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -182,6 +173,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: var(--transition-2);
 }
 
 .separator {
@@ -204,6 +196,7 @@ article {
   color: var(--orange-yellow-crayola);
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: var(--transition-2)
 }
 
 .icon-box::before {
@@ -217,6 +210,7 @@ article {
 
 .icon-box ion-icon {
   --ionicon-stroke-width: 35px;
+  transition: var(--transition-1);
 }
 
 article {
@@ -244,6 +238,7 @@ article.active {
 .h5 {
   color: var(--white-2);
   text-transform: capitalize;
+  transition: var(--transition-2)
 }
 
 .h2 {
@@ -277,6 +272,7 @@ article.active {
   height: 3px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
+  transition: var(--transition-2);
 }
 
 .has-scrollbar::-webkit-scrollbar {
@@ -309,6 +305,7 @@ article.active {
   box-shadow: var(--shadow-2);
   cursor: pointer;
   z-index: 1;
+  transition: var(--transition-2);
 }
 
 .content-card::before {
@@ -318,6 +315,7 @@ article.active {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  transition: var(--transition-2);
 }
 
 
@@ -364,6 +362,7 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  transition: var(--transition-2);
 }
 
 .info-content .name {
@@ -425,7 +424,6 @@ main {
 .sidebar-info_more {
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-2);
 }
 
 .sidebar.active .sidebar-info_more {
@@ -456,11 +454,13 @@ main {
   font-size: var(--fs-8);
   text-transform: uppercase;
   margin-bottom: 2px;
+  transition: var(--transition-2);
 }
 
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
+  transition: var(--transition-2);
 }
 
 .contact-info address {
@@ -548,6 +548,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  transition: var(--transition-2)
 }
 
 .about-text p {
@@ -581,6 +582,7 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  transition: var(--transition-2)
 }
 
 .service-item::before {
@@ -590,6 +592,7 @@ main {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  transition: var(--transition-2)
 }
 
 .service-icon-box {
@@ -611,8 +614,9 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);
   line-height: 1.6;
+  transition: var(--transition-2)
 }
 
 
@@ -655,6 +659,7 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
+  transition: var(--transition-2)
 }
 
 .testimonials-item-title {
@@ -671,6 +676,7 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: var(--transition-2)
 }
 
 
@@ -828,13 +834,10 @@ main {
 
 .clients-item img {
   width: 100%;
-  filter: grayscale(1);
+
   transition: var(--transition-1);
 }
 
-.clients-item img:hover {
-  filter: grayscale(0);
-}
 
 
 
@@ -1509,6 +1512,7 @@ textarea.form-input::-webkit-resizer {
 
   .info-content .title {
     padding: 5px 18px;
+    transition: var(--transition-2);
   }
 
   .info_more-btn {
@@ -1547,14 +1551,17 @@ textarea.form-input::-webkit-resizer {
 
   .navbar {
     border-radius: 20px 20px 0 0;
+    transition: var(--transition-2)
   }
 
   .navbar-list {
     gap: 20px;
+    transition: var(--transition-2)
   }
 
   .navbar-link {
     --fs-8: 14px;
+    transition: var(--transition-2)
   }
 
 
@@ -1584,6 +1591,7 @@ textarea.form-input::-webkit-resizer {
   .service-icon-box {
     margin-bottom: 0;
     margin-top: 5px;
+    transition: var(--transition-2);
   }
 
   .service-content-box {
