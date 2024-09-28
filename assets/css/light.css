@@ -43,8 +43,25 @@
 
 body.light-mode {
     background: var(--smoky-light);
-    transition: var(--transition-2)
 }
+
+body.light-mode p{
+    font-weight: var(--fw-400);
+}
+
+body.light-mode .floating-ball {
+    background: var(--eerie-black-2-light);
+    box-shadow: var(--shadow-1-light);
+}
+
+body.light-mode .floating-ball::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--eerie-black-2-light);
+    border-radius: inherit;
+    z-index: -1;
+  }
 
 
 
@@ -56,7 +73,6 @@ body.light-mode article {
     background: var(--eerie-black-2-light);
     border: 1px solid var(--eerie-black-2-light);
     box-shadow: var(--shadow-1-light);
-    transition: var(--transition-2);
 }
 
 body.light-mode .separator {
@@ -67,7 +83,6 @@ body.light-mode .icon-box {
     background: var(--eerie-black-2-light);
     color: var(--orange-blue-crayola);
     box-shadow: var(--shadow-1-light);
-    transition: var(--transition-2);
 }
 
 body.light-mode .icon-box::before {
@@ -76,7 +91,6 @@ body.light-mode .icon-box::before {
 
 body.light-mode .icon-box ion-icon {
     --ionicon-stroke-width: 3rem;
-    transition: var(--transition-1);
   }
 
 body.light-mode .h2,
@@ -88,7 +102,6 @@ body.light-mode .h5 {
 
 body.light-mode .article-title::after {
     background: var(--text-gradient-blue);
-    transition: var(--transition-2);
 }
 
 body.light-mode .has-scrollbar::-webkit-scrollbar-track {
@@ -100,14 +113,12 @@ body.light-mode .has-scrollbar::-webkit-scrollbar-thumb {
 }
 
 body.light-mode .content-card {
-    background: var(--eerie-black-2-lightt);
+    background: var(--eerie-black-2-light);
     box-shadow: var(--shadow-1-light);
-    transition: var(--transition-2);
 }
 
 body.light-mode .content-card::before {
-    background: var(--eerie-black-2-lightt);
-    transition: var(--transition-2);
+    background: var(--eerie-black-2-light);
 }
 
 
@@ -116,8 +127,11 @@ body.light-mode .content-card::before {
 
 body.light-mode .avatar-box {
     background: var(--bg-gradient-onyx-light);
-    transition: var(--transition-2);
     box-shadow: var(--shadow-1);
+}
+
+body.light-mode .avatar-box img {
+    filter: brightness(105%);
 }
 
 body.light-mode .info-content .name {
@@ -128,7 +142,6 @@ body.light-mode .info-content .title {
     color: var(--white-2-light);
     background: var(--jet-light);
     font-weight: var(--fw-500);
-    transition: var(--transition-2);
 }
 
 body.light-mode .info_more-btn {
@@ -153,13 +166,11 @@ body.light-mode .info_more-btn:focus::before {
 
 body.light-mode .contact-title {
     color: var(--light-gray-50-light);
-    transition: var(--transition-2);
 }
 
 body.light-mode .contact-info :is(.contact-link, time, address) {
     color: var(--white-2-light);
     font-size: var(--fs-7);
-    transition: var(--transition-2);
 }
 
 body.light-mode .social-item .social-link {
@@ -176,32 +187,28 @@ body.light-mode .navbar {
     background: var(--eerie-black-2-light);
     border: 1px solid var(--eerie-black-2-light);
     box-shadow: var(--shadow-1-light);
-    transition: var(--transition-2);
 }
 
 body.light-mode .navbar-link {
     color: var(--light-gray-70-light);
-    transition: color var(--transition-1);
 }
 
 body.light-mode .navbar-link:hover,
 body.light-mode .navbar-link:focus {
     color: var(--vegas-blue);
-    transition: var(--transition-2)
+
 }
 
 body.light-mode .navbar-link.active {
     color: var(--orange-blue-crayola);
-    transition: var(--transition-2)
+
 }
 
 
 /* ABOUT */
 
-body.light-mode .about-text {
+body.light-mode .about-text p {
     color: var(--white-2-light);
-    transition: var(--transition-2);
-    font-weight: var(--fw-400);
 }
 
 
@@ -210,23 +217,21 @@ body.light-mode .about-text {
 body.light-mode .service-item {
     background: var(--eerie-black-2-light);
     box-shadow: var(--shadow-1-light);
-    transition: var(--transition-2)
+
 }
 
 body.light-mode .service-icon-box {
-    filter: grayscale(1);
-    transition: var(--transition-2);
+    /* filter: grayscale(1); */
+    filter: hue-rotate(180deg) brightness(90%);
 }
 
 body.light-mode .service-item::before {
-
     background: var(--eerie-black-2-light);
-    transition: var(--transition-2)
+
 }
 
 body.light-mode .service-item-text {
     color: var(--light-gray-light);
-    transition: var(--transition-2)
 }
 
 
@@ -234,27 +239,28 @@ body.light-mode .service-item-text {
 
 body.light-mode .testimonials-avatar-box {
     background: var(--bg-gradient-onyx-light);
-    transition: var(--transition-2)
 }
 
-body.light-mode .testimonials-text {
+body.light-mode .testimonials-text p {
     color: var(--light-gray-light);
-    transition: var(--transition-2)
+
 }
+
+.testimonials-item {
+    transition: background-color var(--transition-2);
+  }
 
 
 /* testimonials-modal */
 
 body.light-mode .overlay {
     background: hsl(0, 0%, 5%);
-    transition: var(--transition-1);
 }
 
 body.light-mode .testimonials-modal {
     background: var(--eerie-black-2-light);
     border: 1px solid var(--jet);
     box-shadow: var(--shadow-5);
-    transition: var(--transition-1);
 }
 
 body.light-mode .modal-close-btn {
@@ -355,7 +361,6 @@ body.light-mode .project-category {
 body.light-mode .filter-item button {
     color: var(--white-2-light);
     font-size: var(--fs-5);
-    transition: var(--transition-1);
   }
 
 body.light-mode .filter-item button:hover {
@@ -441,26 +446,22 @@ body.light-mode .form-btn:disabled:hover::before {
 
 body.light-mode .english_name {
     color: var(--white-2-light);
-    transition: color var(--transition-1);
 }
 
 body.light-mode .project_director {
     color: var(--white-2-light);
     font-weight: var(--fw-400);
-    transition: color var(--transition-1);
 }
 
 body.light-mode .project_link {
     color: var(--white-2-light);
     font-weight: var(--fw-400);
     margin-right: 10px;
-    transition: color var(--transition-1);
 }
 
 body.light-mode .project_link:hover,
 body.light-mode .project_link:focus {
     color: var(--vegas-blue);
-    transition: color var(--transition-1);
 }
 
 body.light-mode .powered {
@@ -473,4 +474,27 @@ body.light-mode .powered_name {
 
 body.light-mode .powered_name:hover {
     color: var(--vegas-blue);
+}
+
+@media (min-width: 1250px) {
+
+    /**
+     * RESET
+     */
+  
+    body.light-mode::-webkit-scrollbar-track {
+      background: var(--smoky-light);
+    }
+  
+    body.light-mode::-webkit-scrollbar-thumb {
+      border: 5px solid var(--eerie-black-1-light);
+      background: var(--eerie-black-2-light);
+      border-radius: 20px;
+
+    }
+  
+    body.light-mode::-webkit-scrollbar-thumb:hover {
+      background: var(--smoky-light);
+    }
+
 }

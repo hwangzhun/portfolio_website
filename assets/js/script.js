@@ -158,27 +158,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-// 暗黑模式切换
-// 获取切换按钮
-const themeToggleButton = document.getElementById('theme-toggle');
-
-// 检查用户偏好，设置初始主题
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'light') {
-  document.body.classList.add('light-mode');
-} else {
-  document.body.classList.remove('light-mode');
-}
-
-// 切换主题并存储用户选择
-themeToggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  
-  // 根据当前主题，存储到 localStorage
-  let theme = 'light';
-  if (document.body.classList.contains('light-mode')) {
-    theme = 'light';
-  }
-  localStorage.setItem('theme', theme);
-});

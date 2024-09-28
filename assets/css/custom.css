@@ -81,10 +81,10 @@
 
 .powered {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 0.5vh;
     font-size: var(--fs-8);
-    font-weight: var(--fw-300);
-    color: var(--white-2-light);
+    font-weight: var(--fw-400);
+    color: var(--white-3-light);
 }
 
 .powered_name {
@@ -101,9 +101,64 @@
 }
 
 .powered_by{
-    margin-bottom:6em;
-    display: none;
+    margin-bottom: 1rem;
 }
+
+/* 悬浮球的基本样式 */
+.floating-ball {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 4vh;
+    height: 4vh;
+    background-color: var(--border-gradient-onyx); /* 默认颜色 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-2) ;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+  }
+
+  .floating-ball::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--eerie-black-1);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  /* 鼠标悬停时的效果 */
+  .floating-ball:hover {
+    transform: scale(1.1); /* 悬浮球放大 */
+  }
+  
+  /* 小图标样式 */
+  .ball-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* 切换时的旋转动画 */
+  .floating-ball.clicked .ball-icon {
+    animation: rotate 0.6s ease forwards;
+  }
+
+  
+  
+  /* 旋转动画定义 */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 
 @media (min-width: 1px) {
 
@@ -113,19 +168,25 @@
 
 }
 
+@media (max-width: 1024px) {
+
+    .powered_by{
+        margin-bottom: 5rem;
+    }
+}
+
 @media (min-width: 1024px) {
 
     .english_name {
         text-align: left;
     }
 
+    .powered_by{
+        margin-bottom: 2rem;
+    }
 }
 
 @media (min-width: 580px) {
-
-    .powered_by{
-        display: block;
-    }
 
 }
 
@@ -134,5 +195,4 @@
     .english_name {
         text-align: center;
     }
-
 }
