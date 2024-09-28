@@ -1113,11 +1113,12 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  transition: var(--transition-2);
 }
 
 .project-item>a:hover img {
   transform: scale(1.1);
+  transition: var(--transition-2)
 }
 
 .project-title,
@@ -1157,6 +1158,10 @@ main {
   gap: 20px;
 }
 
+.blog-post-item {
+  animation: scaleUp 0.25s ease forwards
+}
+
 .blog-post-item>a {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -1186,7 +1191,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  transition: var(--transition-1);
 }
 
 .blog-post-item>a:hover .blog-banner-box img {

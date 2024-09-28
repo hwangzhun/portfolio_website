@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "devDependencies": {
+        "parcel": "^2.0.0",
+        "safe-buffer": "^5.2.1"
+    }
+}
