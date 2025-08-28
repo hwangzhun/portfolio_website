@@ -1,7 +1,12 @@
 {
     "scripts": {
+<<<<<<< HEAD
         "start": "parcel index.html",
         "build": "parcel build index.html"
+=======
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+>>>>>>> 48453e052bc51445f2ef14f2a1b12392965cc170
     },
     "devDependencies": {
         "parcel": "^2.0.0",
